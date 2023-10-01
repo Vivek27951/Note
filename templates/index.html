@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+  </head>
+  <body>
+    <h1>Notes</h1>
+    <form method="POST">
+      <input type="text" name="content" placeholder="Add a note" required />
+      <button type="submit">Add</button>
+      <button><a href="{{ url_for('search')}}">Search</a></button>
+    </form>
+
+    <ul>
+      {% for note in notes %}
+      <li>
+        {{ note.content }}
+        <a href="{{ url_for('delete', note_id=note._id) }}">Delete</a>
+        <a href="{{ url_for('update', note_id=note._id) }}">Update</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <ul>
+      {% for message in messages %}
+      <li class="alert alert-{{ message[1] }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endwith %}
+  </body>
+</html>

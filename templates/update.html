@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Note</title>
+</head>
+<body>
+    <h1>Update Note</h1>
+    
+    <form method="POST">
+        <textarea name="new_content" placeholder="Edit the note" required>{{ note.content }}</textarea>
+        <button type="submit">Update</button>
+    </form>
+
+    <a href="{{ url_for('index') }}">Back to Notes</a>
+</body>
+</html>
