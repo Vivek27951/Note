@@ -1,0 +1,28 @@
+# Flask Notes App
+
+This is a simple Flask web application for managing notes. Users can add, view, update, and delete notes. Notes are stored in a MongoDB database.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- Python 3.x installed
+- MongoDB installed and running locally (or provide a connection URI to a remote MongoDB instance)
+- Google Cloud SDK installed (if you want to deploy the app to Google App Engine)
+
+## Setup
+
+1. Clone this repository:
+
+   ```shell
+   git clone https://github.com/Vivek27951/Note.git
+   cd flask-notes-app
+
+2. Create a virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+
+3. Install the required Python packages: pip install -r requirements.txt
+
+4 . Run the Application : python app.py
+
