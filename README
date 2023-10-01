@@ -15,7 +15,7 @@ Before you begin, ensure you have met the following requirements:
 1. Clone this repository:
 
    ```shell
-   git clone https://github.com/your-username/flask-notes-app.git
+   git clone https://github.com/Vivek27951/Note.git
    cd flask-notes-app
 
 2. Create a virtual environment
