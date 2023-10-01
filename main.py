@@ -4,7 +4,7 @@ from bson import ObjectId
 from datetime import datetime 
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key_here' 
+app.secret_key = '5e8ddc5947a9f25736e4dbca9f01322e' 
 
 # MongoDB connection
 client = MongoClient('mongodb+srv://Vivek27951:Enyb4Za5h9PP962@sandbox.0r8nd.mongodb.net/')
