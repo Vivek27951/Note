@@ -1,13 +1,19 @@
 from flask import Flask, request, render_template, redirect, url_for, flash
 from pymongo import MongoClient
 from bson import ObjectId
-from datetime import datetime 
+from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
+
+mongodb_uri = os.getenv("MONGODB_URI")
+secret_key = os.getenv("SECRET_KEY")
 
 app = Flask(__name__)
-app.secret_key = '5e8ddc5947a9f25736e4dbca9f01322e' 
+app.secret_key = secret_key 
 
 # MongoDB connection
-client = MongoClient('mongodb+srv://Vivek27951:Enyb4Za5h9PP962@sandbox.0r8nd.mongodb.net/')
+client = MongoClient(mongodb_uri)
 db = client['notes_app']
 notes_collection = db['notes']
 
